@@ -18,9 +18,9 @@ default:
 editor:
   models:
     Scaffolding::CompletelyConcrete::TangibleThing: manage
-    Scaffolding::AbsolutelyAbstract::CreativeConcept:
-      - read
-      - update
+    # Scaffolding::AbsolutelyAbstract::CreativeConcept:
+      # - read
+      # - update
 
 admin:
   includes:
@@ -32,5 +32,5 @@ admin:
     Note: manage
     Team: manage
     Membership: manage
-    Scaffolding::AbsolutelyAbstract::CreativeConcept: manage
+    # Scaffolding::AbsolutelyAbstract::CreativeConcept: manage
     Platform::Application: manage
