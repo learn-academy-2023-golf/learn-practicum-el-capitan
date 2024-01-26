@@ -1,0 +1,5 @@
+BASE_URL: http://localhost:3000
+MARKETING_SITE_URL: /account
+# STRIPE_SECRET_KEY: ...
+# Hiding Creative Concept
+HIDE_THINGS: true
