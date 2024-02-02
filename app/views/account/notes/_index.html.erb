@@ -6,7 +6,6 @@
 <% hide_back ||= false %>
 <% pagy ||= nil %>
 <% pagy, notes = pagy(notes, page_param: :notes_page) unless pagy %>
-
 <%= action_model_select_controller do %>
   <% cable_ready_updates_for context, collection do %>
     <%= render 'account/shared/box', pagy: pagy do |box| %>
@@ -18,9 +17,10 @@
       <% box.table do %>
         <%= form_with(url: account_team_notes_url(team_id: @team.id), method: :get) do |form| %>
         <%= form_with(url: account_team_notes_url(team_id: @team.id, custom_param: "value"), method: :get) do |form| %>
-        <%= form.label :query, "Search for" %>
-        <%= form.text_field :query %>
+        <%= form.text_field :query, class: "ml-8" %>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 ml-8 px-4 border border-blue-700 rounded">
         <%= form.submit "Search", class: "btn btn-primary" %> 
+        </button>
         <% end %>
         <% end %>
         <% if notes.any? %>
