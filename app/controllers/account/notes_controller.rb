@@ -4,6 +4,11 @@ class Account::NotesController < Account::ApplicationController
   # GET /account/teams/:team_id/notes
   # GET /account/teams/:team_id/notes.json
   def index
+      if params[:query].present?
+        @notes = Note.order(created_at: :desc).search(params[:query])
+      else
+        @notes = Note.order(created_at: :desc)
+      end
     delegate_json_to_api
   end
 
