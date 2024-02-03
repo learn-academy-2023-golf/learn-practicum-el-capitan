@@ -38,6 +38,12 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 5.0.5"
 
+#PG search gem: builds ActiveRecord named scopes that take advantage of PostgreSQL’s full text search
+gem 'pg_search'
+
+# Ransack will help you easily add searching to your Rails application, without any additional dependencies.
+gem 'ransack'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

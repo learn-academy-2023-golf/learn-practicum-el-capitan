@@ -1,8 +1,10 @@
 class Note < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :search, against: [:title, :body]
+  
   # 🚅 add concerns above.
 
   # 🚅 add attribute accessors above.
-
   belongs_to :team
   belongs_to :creator, class_name: "Membership"
   # 🚅 add belongs_to associations above.

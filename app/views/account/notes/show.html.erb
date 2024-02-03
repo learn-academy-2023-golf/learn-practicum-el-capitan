@@ -17,7 +17,6 @@
             <%# 🚅 super scaffolding will insert new fields above this line. %>
           <% end %>
         <% end %>
-
         <% box.actions do %>
           <%= link_to t('.buttons.edit'), [:edit, :account, @note], class: first_button_primary if can? :edit, @note %>
           <%# 🚅 super scaffolding will insert new action model buttons above this line. %>
