@@ -1,7 +1,7 @@
 class Note < ApplicationRecord
   include PgSearch::Model
   pg_search_scope :search, against: [:title, :body]
-  
+
   # 🚅 add concerns above.
 
   # 🚅 add attribute accessors above.
